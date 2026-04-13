@@ -1,0 +1,10 @@
+spechub v0.0.2
+spec.yaml is invalid:
+  dependencies.0.ref: Required
+  dependencies.1.ref: Required
+  dependencies.2.ref: Required
+  dependencies.3.ref: Required
+  dependencies.4.ref: Required
+  dependencies.5.ref: Required
+  dependencies.6.ref: Required
+  dependencies.7.ref: Required

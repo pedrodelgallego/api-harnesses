@@ -1,0 +1,163 @@
+
+[1m╔══════════════════════════════════════════════════════╗[0m
+[1m║           SpecHub Batch Publisher                    ║[0m
+[1m╚══════════════════════════════════════════════════════╝[0m
+
+[0;36m  ℹ [0m Tag       : [1m0.1.0[0m
+[0;36m  ℹ [0m Root      : /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses
+[0;36m  ℹ [0m Log file  : /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/publisher/logs/publish_20260407_192440.log
+[1;33m  ⚠ [0m DRY RUN — no specs will be pushed
+
+[0;36m  ℹ [0m Found 14 spec(s) to process
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-logging[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-logging[0m
+
+[0;36m  ℹ [0m Spec name : api-logging
+spechub v0.0.1
+Error: spec.yaml not found in /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses
+[0;31m  ✖ [0m api-logging: validation FAILED
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-rest-design[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-rest-design[0m
+
+[0;36m  ℹ [0m Spec name : api-rest-design
+spechub v0.0.1
+Error: spec.yaml not found in /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses
+[0;31m  ✖ [0m api-rest-design: validation FAILED
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-rest-resilience[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-rest-resilience[0m
+
+[0;36m  ℹ [0m Spec name : api-rest-resilience
+spechub v0.0.1
+Error: spec.yaml not found in /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses
+[0;31m  ✖ [0m api-rest-resilience: validation FAILED
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-security[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-security[0m
+
+[0;36m  ℹ [0m Spec name : api-security
+spechub v0.0.1
+Error: spec.yaml not found in /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses
+[0;31m  ✖ [0m api-security: validation FAILED
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-security-headers[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-security-headers[0m
+
+[0;36m  ℹ [0m Spec name : api-security-headers
+spechub v0.0.1
+Error: spec.yaml not found in /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses
+[0;31m  ✖ [0m api-security-headers: validation FAILED
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-telemetry[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-telemetry[0m
+
+[0;36m  ℹ [0m Spec name : api-telemetry
+spechub v0.0.1
+Error: spec.yaml not found in /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses
+[0;31m  ✖ [0m api-telemetry: validation FAILED
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-testing[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-testing[0m
+
+[0;36m  ℹ [0m Spec name : api-testing
+spechub v0.0.1
+Error: spec.yaml not found in /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses
+[0;31m  ✖ [0m api-testing: validation FAILED
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-versioning[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-versioning[0m
+
+[0;36m  ℹ [0m Spec name : api-versioning
+spechub v0.0.1
+Error: spec.yaml not found in /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses
+[0;31m  ✖ [0m api-versioning: validation FAILED
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  fastify-api-blueprint[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/fastify-api-blueprint[0m
+
+[0;36m  ℹ [0m Spec name : fastify-api-blueprint
+spechub v0.0.1
+Error: spec.yaml not found in /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses
+[0;31m  ✖ [0m fastify-api-blueprint: validation FAILED
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  go-api-blueprint[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/go-api-blueprint[0m
+
+[0;36m  ℹ [0m Spec name : my-spec
+spechub v0.0.1
+Error: spec.yaml not found in /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses
+[0;31m  ✖ [0m go-api-blueprint: validation FAILED
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  java-api-blueprint[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/java-api-blueprint[0m
+
+[0;36m  ℹ [0m Spec name : my-spec
+spechub v0.0.1
+Error: spec.yaml not found in /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses
+[0;31m  ✖ [0m java-api-blueprint: validation FAILED
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  kotlin-api-blueprint[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/kotlin-api-blueprint[0m
+
+[0;36m  ℹ [0m Spec name : my-spec
+spechub v0.0.1
+Error: spec.yaml not found in /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses
+[0;31m  ✖ [0m kotlin-api-blueprint: validation FAILED
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  python-api-blueprint[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/python-api-blueprint[0m
+
+[0;36m  ℹ [0m Spec name : my-spec
+spechub v0.0.1
+Error: spec.yaml not found in /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses
+[0;31m  ✖ [0m python-api-blueprint: validation FAILED
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  rust-api-blueprint[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/rust-api-blueprint[0m
+
+[0;36m  ℹ [0m Spec name : my-spec
+spechub v0.0.1
+Error: spec.yaml not found in /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses
+[0;31m  ✖ [0m rust-api-blueprint: validation FAILED
+
+[2m────────────────────────────────────────────────────────[0m
+
+[1m  Summary[0m
+
+[0;32m  ✔ [0m Passed : 0
+[0;31m  ✖ [0m Failed : 14
+
+[0;31m  ✖ [0m Failed specs:
+[0;31m  ✖ [0m   • api-logging
+[0;31m  ✖ [0m   • api-rest-design
+[0;31m  ✖ [0m   • api-rest-resilience
+[0;31m  ✖ [0m   • api-security
+[0;31m  ✖ [0m   • api-security-headers
+[0;31m  ✖ [0m   • api-telemetry
+[0;31m  ✖ [0m   • api-testing
+[0;31m  ✖ [0m   • api-versioning
+[0;31m  ✖ [0m   • fastify-api-blueprint
+[0;31m  ✖ [0m   • go-api-blueprint
+[0;31m  ✖ [0m   • java-api-blueprint
+[0;31m  ✖ [0m   • kotlin-api-blueprint
+[0;31m  ✖ [0m   • python-api-blueprint
+[0;31m  ✖ [0m   • rust-api-blueprint
+
+[0;36m  ℹ [0m Full log: /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/publisher/logs/publish_20260407_192440.log
+

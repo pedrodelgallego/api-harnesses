@@ -1,0 +1,4 @@
+spechub v0.0.2
+spec.yaml is valid
+spechub v0.0.2
+Error: unauthorized — token may be expired; run `spechub login` [AUTH_EXPIRED]

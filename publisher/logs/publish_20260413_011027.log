@@ -1,0 +1,62 @@
+
+[1m╔══════════════════════════════════════════════════════╗[0m
+[1m║           SpecHub Batch Publisher                    ║[0m
+[1m╚══════════════════════════════════════════════════════╝[0m
+
+[0;36m  ℹ [0m Root      : /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses
+[0;36m  ℹ [0m Log file  : /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/publisher/logs/publish_20260413_011027.log
+
+[0;36m  ℹ [0m Found 14 spec(s) to process
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-logging[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-logging[0m
+
+[0;36m  ℹ [0m Validating ...
+[0;32m  ✔ [0m api-logging: validation passed
+[0;36m  ℹ [0m Pushing ...
+spechub v0.0.2
+spec.yaml is valid
+spechub v0.0.2
+Error: unauthorized — token may be expired; run `spechub login` [AUTH_EXPIRED]
+[0;31m  ✖ [0m api-logging: push FAILED (exit 1)
+[0;31m  ✖ [0m        Error: unauthorized — token may be expired; run `spechub login` [AUTH_EXPIRED]
+[0;36m  ℹ [0m Full output: /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/publisher/logs/api-logging_20260413_011027.log
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-rest-design[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-rest-design[0m
+
+[0;36m  ℹ [0m Validating ...
+[0;32m  ✔ [0m api-rest-design: validation passed
+[0;36m  ℹ [0m Pushing ...
+spechub v0.0.2
+spec.yaml is valid
+spechub v0.0.2
+Error: unauthorized — token may be expired; run `spechub login` [AUTH_EXPIRED]
+[0;31m  ✖ [0m api-rest-design: push FAILED (exit 1)
+[0;31m  ✖ [0m        Error: unauthorized — token may be expired; run `spechub login` [AUTH_EXPIRED]
+[0;36m  ℹ [0m Full output: /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/publisher/logs/api-rest-design_20260413_011027.log
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-rest-resilience[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-rest-resilience[0m
+
+[0;36m  ℹ [0m Validating ...
+[0;32m  ✔ [0m api-rest-resilience: validation passed
+[0;36m  ℹ [0m Pushing ...
+spechub v0.0.2
+spec.yaml is valid
+spechub v0.0.2
+Error: unauthorized — token may be expired; run `spechub login` [AUTH_EXPIRED]
+[0;31m  ✖ [0m api-rest-resilience: push FAILED (exit 1)
+[0;31m  ✖ [0m        Error: unauthorized — token may be expired; run `spechub login` [AUTH_EXPIRED]
+[0;36m  ℹ [0m Full output: /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/publisher/logs/api-rest-resilience_20260413_011027.log
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-security[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-security[0m
+
+[0;36m  ℹ [0m Validating ...
+[0;32m  ✔ [0m api-security: validation passed
+[0;36m  ℹ [0m Pushing ...

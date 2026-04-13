@@ -1,0 +1,242 @@
+
+[1m╔══════════════════════════════════════════════════════╗[0m
+[1m║           SpecHub Batch Publisher                    ║[0m
+[1m╚══════════════════════════════════════════════════════╝[0m
+
+[0;36m  ℹ [0m Root      : /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses
+[0;36m  ℹ [0m Log file  : /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/publisher/logs/publish_20260407_230859.log
+
+[0;36m  ℹ [0m Found 14 spec(s) to process
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-logging[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-logging[0m
+
+[0;36m  ℹ [0m Validating ...
+[0;32m  ✔ [0m api-logging: validation passed
+[0;36m  ℹ [0m Pushing ...
+spechub v0.0.2
+spec.yaml is valid
+spechub v0.0.2
+Pushed pedro-delgallego/api-logging:0.0.2 (sha256:ec1a050ef71f214b4c66febccaab48a3fa569bf3876ec9639e657d94cd9af8ae)
+Changelog: attached
+[0;32m  ✔ [0m api-logging: pushed successfully
+       [2mPushed pedro-delgallego/api-logging:0.0.2 (sha256:ec1a050ef71f214b4c66febccaab48a3fa569bf3876ec9639e657d94cd9af8ae)[0m
+       [2mChangelog: attached[0m
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-rest-design[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-rest-design[0m
+
+[0;36m  ℹ [0m Validating ...
+[0;32m  ✔ [0m api-rest-design: validation passed
+[0;36m  ℹ [0m Pushing ...
+spechub v0.0.2
+spec.yaml is valid
+spechub v0.0.2
+Pushed pedro-delgallego/api-rest-design:0.0.2 (sha256:e85ed1eac1ad8194e3941bd8716cfcccd91bdaf7ebd655904d409b786be29413)
+Changelog: attached
+[0;32m  ✔ [0m api-rest-design: pushed successfully
+       [2mPushed pedro-delgallego/api-rest-design:0.0.2 (sha256:e85ed1eac1ad8194e3941bd8716cfcccd91bdaf7ebd655904d409b786be29413)[0m
+       [2mChangelog: attached[0m
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-rest-resilience[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-rest-resilience[0m
+
+[0;36m  ℹ [0m Validating ...
+[0;32m  ✔ [0m api-rest-resilience: validation passed
+[0;36m  ℹ [0m Pushing ...
+spechub v0.0.2
+spec.yaml is valid
+spechub v0.0.2
+Pushed pedro-delgallego/api-rest-resilience:0.0.2 (sha256:468eacd045a34921c508130ea10e8c2d0b48ecab3d6dc3b8160188b28a6ee154)
+Changelog: attached
+[0;32m  ✔ [0m api-rest-resilience: pushed successfully
+       [2mPushed pedro-delgallego/api-rest-resilience:0.0.2 (sha256:468eacd045a34921c508130ea10e8c2d0b48ecab3d6dc3b8160188b28a6ee154)[0m
+       [2mChangelog: attached[0m
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-security[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-security[0m
+
+[0;36m  ℹ [0m Validating ...
+[0;32m  ✔ [0m api-security: validation passed
+[0;36m  ℹ [0m Pushing ...
+spechub v0.0.2
+spec.yaml is valid
+spechub v0.0.2
+Pushed pedro-delgallego/api-security:0.0.2 (sha256:1f2dbd749ef3f5ed4771aceee26dd561923cfd05a270c220bc316020acc914d2)
+Changelog: attached
+[0;32m  ✔ [0m api-security: pushed successfully
+       [2mPushed pedro-delgallego/api-security:0.0.2 (sha256:1f2dbd749ef3f5ed4771aceee26dd561923cfd05a270c220bc316020acc914d2)[0m
+       [2mChangelog: attached[0m
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-security-headers[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-security-headers[0m
+
+[0;36m  ℹ [0m Validating ...
+[0;32m  ✔ [0m api-security-headers: validation passed
+[0;36m  ℹ [0m Pushing ...
+spechub v0.0.2
+spec.yaml is valid
+spechub v0.0.2
+Pushed pedro-delgallego/api-security-headers:0.0.2 (sha256:19a197636ac2acc3afd2c742b888122a2a23e28866c3c22db6236c01cec6f373)
+Changelog: attached
+[0;32m  ✔ [0m api-security-headers: pushed successfully
+       [2mPushed pedro-delgallego/api-security-headers:0.0.2 (sha256:19a197636ac2acc3afd2c742b888122a2a23e28866c3c22db6236c01cec6f373)[0m
+       [2mChangelog: attached[0m
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-telemetry[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-telemetry[0m
+
+[0;36m  ℹ [0m Validating ...
+[0;32m  ✔ [0m api-telemetry: validation passed
+[0;36m  ℹ [0m Pushing ...
+spechub v0.0.2
+spec.yaml is valid
+spechub v0.0.2
+Pushed pedro-delgallego/api-telemetry:0.0.2 (sha256:f5e021cd2c7ac77c3699d2282cdeb9853da93da2348cf714e2b540726c46a22b)
+Changelog: attached
+[0;32m  ✔ [0m api-telemetry: pushed successfully
+       [2mPushed pedro-delgallego/api-telemetry:0.0.2 (sha256:f5e021cd2c7ac77c3699d2282cdeb9853da93da2348cf714e2b540726c46a22b)[0m
+       [2mChangelog: attached[0m
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-testing[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-testing[0m
+
+[0;36m  ℹ [0m Validating ...
+[0;32m  ✔ [0m api-testing: validation passed
+[0;36m  ℹ [0m Pushing ...
+spechub v0.0.2
+spec.yaml is valid
+spechub v0.0.2
+Pushed pedro-delgallego/api-testing:0.0.2 (sha256:0ce13d1076b715c37486ab1eb252b005e79e326b684568515eb687b85f66bea6)
+Changelog: attached
+[0;32m  ✔ [0m api-testing: pushed successfully
+       [2mPushed pedro-delgallego/api-testing:0.0.2 (sha256:0ce13d1076b715c37486ab1eb252b005e79e326b684568515eb687b85f66bea6)[0m
+       [2mChangelog: attached[0m
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  api-versioning[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/api-versioning[0m
+
+[0;36m  ℹ [0m Validating ...
+[0;32m  ✔ [0m api-versioning: validation passed
+[0;36m  ℹ [0m Pushing ...
+spechub v0.0.2
+spec.yaml is valid
+spechub v0.0.2
+Pushed pedro-delgallego/api-versioning:0.0.2 (sha256:270beb40f5fe85b1cdcf8bc796cf5fe8e510b50eadb523d7dff47c66710715dd)
+Changelog: attached
+[0;32m  ✔ [0m api-versioning: pushed successfully
+       [2mPushed pedro-delgallego/api-versioning:0.0.2 (sha256:270beb40f5fe85b1cdcf8bc796cf5fe8e510b50eadb523d7dff47c66710715dd)[0m
+       [2mChangelog: attached[0m
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  fastify-api-blueprint[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/fastify-api-blueprint[0m
+
+[0;36m  ℹ [0m Validating ...
+[0;32m  ✔ [0m fastify-api-blueprint: validation passed
+[0;36m  ℹ [0m Pushing ...
+spechub v0.0.2
+spec.yaml is valid
+spechub v0.0.2
+Pushed pedro-delgallego/fastify-api-blueprint:0.0.2 (sha256:00a554bb014751eb7fc7fb19c502aeb862357ed4dd843419ddd1c3bdb18e48b0)
+Changelog: attached
+[0;32m  ✔ [0m fastify-api-blueprint: pushed successfully
+       [2mPushed pedro-delgallego/fastify-api-blueprint:0.0.2 (sha256:00a554bb014751eb7fc7fb19c502aeb862357ed4dd843419ddd1c3bdb18e48b0)[0m
+       [2mChangelog: attached[0m
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  go-api-blueprint[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/go-api-blueprint[0m
+
+[0;36m  ℹ [0m Validating ...
+[0;32m  ✔ [0m go-api-blueprint: validation passed
+[0;36m  ℹ [0m Pushing ...
+spechub v0.0.2
+spec.yaml is valid
+spechub v0.0.2
+Pushed pedro-delgallego/go-api-blueprint:0.1.0 (sha256:39bf4cf0fe74ff5771b5851a55347bff3af7688ef7dc54eb9fa47a40a714a1fc)
+Changelog: attached
+[0;32m  ✔ [0m go-api-blueprint: pushed successfully
+       [2mPushed pedro-delgallego/go-api-blueprint:0.1.0 (sha256:39bf4cf0fe74ff5771b5851a55347bff3af7688ef7dc54eb9fa47a40a714a1fc)[0m
+       [2mChangelog: attached[0m
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  kotlin-api-blueprint[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/kotlin-api-blueprint[0m
+
+[0;36m  ℹ [0m Validating ...
+[0;32m  ✔ [0m kotlin-api-blueprint: validation passed
+[0;36m  ℹ [0m Pushing ...
+spechub v0.0.2
+spec.yaml is valid
+spechub v0.0.2
+Pushed pedro-delgallego/kotlin-api-blueprint:0.1.0 (sha256:2801e04e5c825582915e0c971a0e11946f03eb27c9902ad23142dab47a07cc9f)
+Changelog: attached
+[0;32m  ✔ [0m kotlin-api-blueprint: pushed successfully
+       [2mPushed pedro-delgallego/kotlin-api-blueprint:0.1.0 (sha256:2801e04e5c825582915e0c971a0e11946f03eb27c9902ad23142dab47a07cc9f)[0m
+       [2mChangelog: attached[0m
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  python-api-blueprint[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/python-api-blueprint[0m
+
+[0;36m  ℹ [0m Validating ...
+[0;32m  ✔ [0m python-api-blueprint: validation passed
+[0;36m  ℹ [0m Pushing ...
+spechub v0.0.2
+spec.yaml is valid
+spechub v0.0.2
+Pushed pedro-delgallego/python-api-blueprint:0.1.0 (sha256:5bca7357d5f31798912858f8222ec50d79a9d98246abc1be5b1c964f98885268)
+Changelog: attached
+[0;32m  ✔ [0m python-api-blueprint: pushed successfully
+       [2mPushed pedro-delgallego/python-api-blueprint:0.1.0 (sha256:5bca7357d5f31798912858f8222ec50d79a9d98246abc1be5b1c964f98885268)[0m
+       [2mChangelog: attached[0m
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  rust-api-blueprint[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/rust-api-blueprint[0m
+
+[0;36m  ℹ [0m Validating ...
+[0;32m  ✔ [0m rust-api-blueprint: validation passed
+[0;36m  ℹ [0m Pushing ...
+spechub v0.0.2
+spec.yaml is valid
+spechub v0.0.2
+Pushed pedro-delgallego/rust-api-blueprint:0.1.0 (sha256:4db77adb05c3b326631cb8a09b2cec1b51392c6a89569930d8658006b8a52f0c)
+Changelog: attached
+[0;32m  ✔ [0m rust-api-blueprint: pushed successfully
+       [2mPushed pedro-delgallego/rust-api-blueprint:0.1.0 (sha256:4db77adb05c3b326631cb8a09b2cec1b51392c6a89569930d8658006b8a52f0c)[0m
+       [2mChangelog: attached[0m
+
+[2m────────────────────────────────────────────────────────[0m
+[1m  springboot-kotlin-api-blueprint[0m
+  [2m/Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/springboot-kotlin-api-blueprint[0m
+
+[0;36m  ℹ [0m Validating ...
+[0;32m  ✔ [0m springboot-kotlin-api-blueprint: validation passed
+[0;36m  ℹ [0m Pushing ...
+spechub v0.0.2
+spec.yaml is valid
+spechub v0.0.2
+Pushed pedro-delgallego/springboot-kotlin-api-blueprint:0.1.0 (sha256:2f6586f8e7cfa62ceddf68b834abb0a8a32e16ed928a405f8aff5e884641b137)
+Changelog: attached
+[0;32m  ✔ [0m springboot-kotlin-api-blueprint: pushed successfully
+       [2mPushed pedro-delgallego/springboot-kotlin-api-blueprint:0.1.0 (sha256:2f6586f8e7cfa62ceddf68b834abb0a8a32e16ed928a405f8aff5e884641b137)[0m
+       [2mChangelog: attached[0m
+
+[2m────────────────────────────────────────────────────────[0m
+
+[1m  Summary[0m
+
+[0;32m  ✔ [0m Passed : 14
+
+[0;36m  ℹ [0m Full log: /Users/pedrodelgallego/projects/spec-driven/spec-vault/harnesses/publisher/logs/publish_20260407_230859.log
+

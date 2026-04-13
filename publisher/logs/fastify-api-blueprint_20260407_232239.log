@@ -1,0 +1,4 @@
+spechub v0.0.2
+spec.yaml is valid
+spechub v0.0.2
+Error: manifest push failed with status 500 [MANIFEST_ERROR]
