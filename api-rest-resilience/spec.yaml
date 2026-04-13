@@ -1,0 +1,18 @@
+apiVersion: spechub.io/v2
+kind: Spec
+metadata:
+  name: api-rest-resilience
+  org: pedro-delgallego
+  version: 0.0.2
+  description: "Non-negotiable rules for API resilience: timeouts, retries with backoff and jitter, circuit breakers, health and readiness probes, graceful shutdown, load shedding, bulkheads, and degraded responses."
+  license: MIT
+  keywords: [resilience, circuit-breaker, retry, backoff, health-probes, graceful-shutdown, bulkhead, load-shedding, rest]
+  authors:
+    - Pedro Delgallego
+  context: |
+    Use this spec as a constraint set when implementing or reviewing API resilience patterns. Language and framework agnostic — compose with a language-specific blueprint spec.
+    Key rules: explicit connect and read timeouts on every outbound call (never OS defaults), deadline propagation to downstream calls within the same request, retries on idempotent operations only with exponential backoff and full jitter (base 100-500ms, 2x multiplier, ±25-50% jitter, max 3-5 attempts), honour Retry-After on 429 and 503, three-state circuit breaker (closed/open/half-open) on every critical dependency, /healthz (no I/O, <10ms, no external deps) and /readyz (real dep checks with per-dep timeout, JSON body) probes, SIGTERM/SIGINT graceful drain with hard timeout from DRAIN_TIMEOUT_MS env var, 429+Retry-After before OOM with load shedding at 80% capacity, per-dependency pool isolation with immediate 503 on exhaustion.
+    Violations table: 14 ERROR + 3 SHOULD NOT.
+targets:
+  - AGENTS.md
+  - specforge
