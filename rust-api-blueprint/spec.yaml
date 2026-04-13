@@ -1,0 +1,29 @@
+apiVersion: spechub.io/v2
+kind: Spec
+
+metadata:
+  name: rust-api-blueprint
+  org: pedro-delgallego
+  version: 0.1.1
+  description: "Non-negotiable rules for building REST APIs with Rust stable, Tokio, Axum, Tower, sqlx query! macros, validator crate, tracing, and envy."
+  license: MIT
+  keywords: [rust, axum, sqlx, tokio, tower, rest-api, blueprint, tracing]
+  authors:
+    - Pedro Delgallego
+  context: |
+    Use this spec to implement or verify a REST API built with Rust stable. It defines non-negotiable stack choices, project structure, and per-section rules.
+    Stack: Axum (never Actix-web or Warp), sqlx with query! macros (never SeaORM or Diesel), validator crate with #[derive(Validate)], jsonwebtoken for validation only, tracing + tracing-subscriber (never log crate directly), envy + serde for config, tower::ServiceExt::oneshot() in tests (never real TcpListener), sqlx migrate for migrations, utoipa for OpenAPI docs.
+    Structure: src/main.rs (entry only), src/app.rs (Router, no bind), src/server.rs (shutdown), src/config.rs, src/error.rs (AppError: IntoResponse), src/routes/, src/middleware/, src/service/, src/model/, src/db/ (migrations/, queries/).
+    Key rules: unwrap()/expect() banned in handler and service code, validated extractor before any field access, typed extension keys for JWT claims (never string map), Tower layer order enforced, shutdown_signal() with DRAIN_TIMEOUT_MS, pool acquire_timeout for 503 on exhaustion, utoipa annotations on every handler, 100% coverage on routes/ and service/.
+dependencies:
+  - ref: "pedro-delgallego/api-rest-design:^0.0.2"
+  - ref: "pedro-delgallego/api-rest-resilience:^0.0.2"
+  - ref: "pedro-delgallego/api-security:^0.0.2"
+  - ref: "pedro-delgallego/api-security-headers:^0.0.2"
+  - ref: "pedro-delgallego/api-logging:^0.0.2"
+  - ref: "pedro-delgallego/api-telemetry:^0.0.2"
+  - ref: "pedro-delgallego/api-testing:^0.0.2"
+  - ref: "pedro-delgallego/api-versioning:^0.0.2"
+targets:
+  - AGENTS.md
+  - specforge

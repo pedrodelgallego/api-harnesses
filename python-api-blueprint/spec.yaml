@@ -1,0 +1,29 @@
+apiVersion: spechub.io/v2
+kind: Spec
+
+metadata:
+  name: python-api-blueprint
+  org: pedro-delgallego
+  version: 0.1.1
+  description: "Non-negotiable rules for building REST APIs with Python 3.12+, FastAPI, Pydantic v2, SQLAlchemy 2.0 async Core, asyncpg, structlog, Alembic, slowapi, and pytest + httpx."
+  license: MIT
+  keywords: [python, fastapi, pydantic, sqlalchemy, structlog, rest-api, blueprint, asyncpg, alembic]
+  authors:
+    - Pedro Delgallego
+  context: |
+    Use this spec to implement or verify a REST API built with Python 3.12+ and FastAPI. It defines non-negotiable stack choices, project structure, and per-section rules.
+    Stack: FastAPI (never Django REST Framework or Flask), Pydantic v2 (never Marshmallow), Pydantic Settings (never os.getenv scattered), SQLAlchemy 2.0 async Core (never ORM mapped classes), asyncpg driver (never psycopg2 blocking), PyJWT for validation only, structlog (never stdlib logging.basicConfig), Alembic for migrations, slowapi backed by Redis for rate limiting, httpx AsyncClient + ASGITransport in tests (never real uvicorn), testcontainers-python for Postgres, pytest-cov, uv for package management.
+    Structure: src/app/main.py (uvicorn entry only), src/app/app.py (create_app() factory), src/app/config.py (Pydantic Settings + lru_cache), src/app/dependencies.py (Depends callables), src/app/routers/ (one per resource), src/app/middleware/, src/app/services/, src/app/models/, src/app/db/ (engine.py, tables.py, queries/, migrations/).
+    Key rules: response_model on every route, extra="forbid" on all request models (additionalProperties:false equivalent), JWT via Depends(get_current_user) not manual header parsing, Pydantic validation errors overridden to RFC 7807 format (never expose loc tuples), structlog contextvars with clear_contextvars() per request (recycled async tasks leak context), get_settings via Depends + dependency_overrides for test injection, lifespan context manager (never @app.on_event), pool_timeout=2 for 503 on exhaustion, 100% coverage on routers/ and services/.
+dependencies:
+  - ref: "pedro-delgallego/api-rest-design:^0.0.2"
+  - ref: "pedro-delgallego/api-rest-resilience:^0.0.2"
+  - ref: "pedro-delgallego/api-security:^0.0.2"
+  - ref: "pedro-delgallego/api-security-headers:^0.0.2"
+  - ref: "pedro-delgallego/api-logging:^0.0.2"
+  - ref: "pedro-delgallego/api-telemetry:^0.0.2"
+  - ref: "pedro-delgallego/api-testing:^0.0.2"
+  - ref: "pedro-delgallego/api-versioning:^0.0.2"
+targets:
+  - AGENTS.md
+  - specforge

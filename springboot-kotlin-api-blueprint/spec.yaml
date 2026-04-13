@@ -1,0 +1,29 @@
+apiVersion: spechub.io/v2
+kind: Spec
+
+metadata:
+  name: springboot-kotlin-api-blueprint
+  org: pedro-delgallego
+  version: 0.1.1
+  description: "Non-negotiable rules for building REST APIs with Spring Boot 3, Kotlin (JVM 21), Spring MVC, Spring Data JPA + Hibernate, Spring Security OAuth2 Resource Server, Flyway, SpringDoc 2, and Kover."
+  license: MIT
+  keywords: [spring-boot, kotlin, jpa, hibernate, spring-security, rest-api, blueprint, jvm, flyway]
+  authors:
+    - Pedro Delgallego
+  context: |
+    Use this spec to implement or verify a REST API built with Spring Boot 3 and Kotlin on JVM 21. It defines non-negotiable stack choices, project structure, and per-section rules.
+    Stack: Spring Boot 3.x with Spring MVC (never WebFlux), kotlin-allopen (plugin.spring) and kotlin-jpa plugins MANDATORY, Jackson + jackson-module-kotlin (never Gson), Bean Validation @Valid (never Konform), Spring Data JPA + Hibernate (never raw JDBC), Spring Security OAuth2 Resource Server for JWT (never PyJWT/manual parsing), SLF4J + Logback + logstash-logback-encoder, @ConfigurationProperties (never @Value for structured config), Flyway, SpringDoc 2.x (never Springfox), testcontainers (never H2), Kover.
+    Structure: Application.kt (entry), config/ (SecurityConfig, OpenApiConfig, AppProperties), controller/, service/, repository/, domain/ (entities), dto/request/, dto/response/, exception/ (GlobalExceptionHandler @RestControllerAdvice).
+    Key rules: no data class for @Entity (Hibernate proxy conflicts), FetchType.EAGER banned on collections (N+1), spring.jpa.open-in-view=false mandatory, @Transactional on service not controller, @RequestBody always paired with @Valid, SecurityFilterChain deny-by-default, CORS only via SecurityConfig (never @CrossOrigin), MDC correlation ID via OncePerRequestFilter with MDC.clear() in finally, @SpringBootTest(MOCK)+MockMvc (never RANDOM_PORT), 100% coverage on controller/service/repository via Kover.
+dependencies:
+  - ref: "pedro-delgallego/api-rest-design:^0.0.2"
+  - ref: "pedro-delgallego/api-rest-resilience:^0.0.2"
+  - ref: "pedro-delgallego/api-security:^0.0.2"
+  - ref: "pedro-delgallego/api-security-headers:^0.0.2"
+  - ref: "pedro-delgallego/api-logging:^0.0.2"
+  - ref: "pedro-delgallego/api-telemetry:^0.0.2"
+  - ref: "pedro-delgallego/api-testing:^0.0.2"
+  - ref: "pedro-delgallego/api-versioning:^0.0.2"
+targets:
+  - AGENTS.md
+  - specforge

@@ -1,0 +1,29 @@
+apiVersion: spechub.io/v2
+kind: Spec
+
+metadata:
+  name: go-api-blueprint
+  org: pedro-delgallego
+  version: 0.1.1
+  description: "Non-negotiable rules for building REST APIs with Go 1.22+, Chi v5, sqlc, go-playground/validator, log/slog, goose, and swaggo."
+  license: MIT
+  keywords: [go, golang, chi, sqlc, rest-api, blueprint, slog, goose]
+  authors:
+    - Pedro Delgallego
+  context: |
+    Use this spec to implement or verify a REST API built with Go 1.22+. It defines non-negotiable stack choices, project structure, and per-section rules.
+    Stack: Chi v5 (never Gin or Echo), sqlc with .sql query files (never GORM), go-playground/validator v10 with struct tags, golang-jwt/jwt v5 for validation only, log/slog (never zap or logrus), caarlos0/env for config, httptest.NewRecorder() in tests (never real listener), goose for migrations, swaggo for OpenAPI docs.
+    Structure: cmd/api/main.go (entry only), internal/app/app.go (router, no bind), internal/server/server.go (shutdown), internal/config, internal/handler, internal/middleware, internal/service, internal/model, internal/db (schema.sql, queries/, migrations/).
+    Key rules: validated request struct + FieldError response on every write route, typed context keys for JWT claims (never string keys), middleware order enforced, signal.NotifyContext for drain with DRAIN_TIMEOUT_MS, pool size (2*NumCPU)+1, swag annotations on every handler, 100% coverage on handler/ and service/.
+dependencies:
+  - ref: "pedro-delgallego/api-rest-design:^0.0.2"
+  - ref: "pedro-delgallego/api-rest-resilience:^0.0.2"
+  - ref: "pedro-delgallego/api-security:^0.0.2"
+  - ref: "pedro-delgallego/api-security-headers:^0.0.2"
+  - ref: "pedro-delgallego/api-logging:^0.0.2"
+  - ref: "pedro-delgallego/api-telemetry:^0.0.2"
+  - ref: "pedro-delgallego/api-testing:^0.0.2"
+  - ref: "pedro-delgallego/api-versioning:^0.0.2"
+targets:
+  - AGENTS.md
+  - specforge

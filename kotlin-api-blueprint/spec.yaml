@@ -1,0 +1,29 @@
+apiVersion: spechub.io/v2
+kind: Spec
+
+metadata:
+  name: kotlin-api-blueprint
+  org: pedro-delgallego
+  version: 0.1.1
+  description: "Non-negotiable rules for building REST APIs with Kotlin (JVM 21), Ktor, Exposed DSL, Konform, Hoplite, structlog-equivalent via SLF4J+Logback, Flyway, and ktor-swagger-ui."
+  license: MIT
+  keywords: [kotlin, ktor, exposed, konform, hoplite, rest-api, blueprint, jvm, flyway]
+  authors:
+    - Pedro Delgallego
+  context: |
+    Use this spec to implement or verify a REST API built with Kotlin on JVM 21 using Ktor. It defines non-negotiable stack choices, project structure, and per-section rules.
+    Stack: Ktor (never Spring Boot), kotlinx-serialization (never Jackson), Konform for validation (never Hibernate Validator), Exposed DSL (never JPA/Hibernate), newSuspendedTransaction(Dispatchers.IO) for all DB calls from coroutines (never blocking transaction{}), com.auth0:java-jwt for validation only, SLF4J + Logback + logstash-logback-encoder, Hoplite for config, Flyway for migrations, ktor-swagger-ui for OpenAPI, testcontainers-kotlin for Postgres, Kover for coverage.
+    Structure: Application.kt (entry only), app/App.kt (router factory), config/Config.kt, routes/ (one file per resource), plugins/ (one concern per file), service/, model/, db/tables/.
+    Key rules: Konform validate() before any field access, JWT via Ktor Authentication plugin not manual header parsing, plugin installation order enforced, MDC correlation ID with clear() after each call, NullAppender in logback-test.xml, JVM shutdown hook calling server.stop() with DRAIN_TIMEOUT_MS, newSuspendedTransaction always (blocking transaction{} in coroutine handler is ERROR), 100% coverage on routes/ and service/ via Kover.
+dependencies:
+  - ref: "pedro-delgallego/api-rest-design:^0.0.2"
+  - ref: "pedro-delgallego/api-rest-resilience:^0.0.2"
+  - ref: "pedro-delgallego/api-security:^0.0.2"
+  - ref: "pedro-delgallego/api-security-headers:^0.0.2"
+  - ref: "pedro-delgallego/api-logging:^0.0.2"
+  - ref: "pedro-delgallego/api-telemetry:^0.0.2"
+  - ref: "pedro-delgallego/api-testing:^0.0.2"
+  - ref: "pedro-delgallego/api-versioning:^0.0.2"
+targets:
+  - AGENTS.md
+  - specforge
