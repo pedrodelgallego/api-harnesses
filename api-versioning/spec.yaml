@@ -1,0 +1,18 @@
+apiVersion: spechub.io/v2
+kind: Spec
+metadata:
+  name: api-versioning
+  org: pedro-delgallego
+  version: 0.0.2
+  description: "Non-negotiable rules for API versioning: when to version, single-strategy enforcement, semantic or date-based scheme, gradual rollout, deprecation lifecycle with sunset headers, and design for longevity."
+  license: MIT
+  keywords: [versioning, deprecation, breaking-changes, sunset, url-versioning, api-lifecycle, semver]
+  authors:
+    - Pedro Delgallego
+  context: |
+    Use this spec as a constraint set when versioning APIs. Language and framework agnostic — compose with a language-specific blueprint spec.
+    Key rules: version from day one with /v1 prefix (never retrofit), URL path versioning exclusively (no Accept-Version headers or ?version= query params), one strategy enforced across the entire portfolio (mixing is ERROR), breaking changes require a version bump (renaming a field, making an optional param required, restructuring data, tightening validation rules), deprecation sequence is Announce→Warn in responses→Enforce deadline→Sunset with sunset date set at or before deprecation announcement, add Deprecation:true and Sunset:<RFC 7231 date> headers on every deprecated-version response, keep deprecated version until sunset date (never pull early), prefer enums over booleans (booleans cannot grow without breaking), undocumented behaviour is part of the contract.
+    Violations table: 5 ERROR + 2 SHOULD NOT.
+targets:
+  - AGENTS.md
+  - specforge
