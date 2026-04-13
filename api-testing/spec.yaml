@@ -1,0 +1,18 @@
+apiVersion: spechub.io/v2
+kind: Spec
+metadata:
+  name: api-testing
+  org: pedro-delgallego
+  version: 0.0.2
+  description: "Non-negotiable rules for API testing: test pyramid, multi-field assertions, component tests against real databases, consumer-driven contract testing, coverage suppression rules, test data management, and test organisation."
+  license: MIT
+  keywords: [testing, test-pyramid, component-testing, contract-testing, coverage, pact, cdc, tdd]
+  authors:
+    - Pedro Delgallego
+  context: |
+    Use this spec as a constraint set when implementing or reviewing API test strategy. Language and framework agnostic — compose with a language-specific blueprint spec.
+    Key rules: test pyramid not inverted (unit→component→contract→e2e, more tests at each lower layer), assert all four dimensions on every positive test (status code, headers, body schema, specific field values) plus at least one negative case per endpoint, component tests use real database in Docker with state reset in beforeEach (never shared state), resetStore() must mutate existing data structures in-place (Map.clear() not new Map()) so the application module's reference stays valid, coverage suppression (/* v8 ignore */ or equivalent) only for structurally unreachable branches with an explanatory comment (never to skip testable error paths like 429 handlers), consumer-driven contracts (CDC) verified in CI on the provider side, test data loaded from config not hardcoded.
+    Violations table: 7 ERROR + 1 SHOULD NOT.
+targets:
+  - AGENTS.md
+  - specforge
