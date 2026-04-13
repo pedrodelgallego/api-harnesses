@@ -1,0 +1,18 @@
+apiVersion: spechub.io/v2
+kind: Spec
+metadata:
+  name: api-telemetry
+  org: pedro-delgallego
+  version: 0.0.2
+  description: "Non-negotiable rules for API observability: traces, metrics, and logs via OTel Collector, wide structured events, semantic conventions, span boundaries, tail-based sampling, SLO-based alerting, and collector pipeline."
+  license: MIT
+  keywords: [telemetry, opentelemetry, tracing, metrics, logs, otlp, slo, observability, sampling]
+  authors:
+    - Pedro Delgallego
+  context: |
+    Use this spec as a constraint set when implementing or reviewing API observability. Language and framework agnostic — compose with a language-specific blueprint spec.
+    Key rules: all three signals (traces, metrics, logs) from every service, OTLP export only via OTel Collector (never write directly to Prometheus/Jaeger from app code), single Meter/Tracer at startup never per-request, use framework's official OTel integration registered before routes, span names use route templates not resolved URLs (GET /users/:id not GET /users/42), ERROR status on 5xx only (never on 4xx), W3C traceparent/tracestate propagation on all outbound calls, trace_id and span_id on every log entry within a request context, Histogram for latency/size metrics (never Counter where Histogram is appropriate), no high-cardinality values as metric dimensions, tail-based sampling always keeping errors and latency outliers, health probes excluded from spans and metric observations, required Resource attributes at startup (service.name, service.version, deployment.environment, service.team, git_hash).
+    Violations table: 13 ERROR + 2 SHOULD NOT.
+targets:
+  - AGENTS.md
+  - specforge
