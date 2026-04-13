@@ -1,0 +1,31 @@
+apiVersion: spechub.io/v2
+kind: Spec
+
+metadata:
+  name: fastify-api-blueprint
+  org: pedro-delgallego
+  version: 0.0.3
+  description: "Non-negotiable rules for building REST APIs with Fastify 5, TypeBox, Drizzle ORM, and Vitest on Node.js 22 LTS with TypeScript strict mode."
+  license: MIT
+  keywords: [fastify, nodejs, typescript, typebox, drizzle, vitest, rest-api, blueprint]
+  authors:
+    - Pedro Delgallego
+  context: |
+    Use this spec to implement or verify a REST API built with Fastify 5 on Node.js 22 LTS with TypeScript strict mode. It defines non-negotiable stack choices, project structure, and per-section rules.
+    Stack: Fastify 5 (never Express), TypeBox (never raw JSON Schema), Drizzle (never Prisma), @fastify/jwt for validation only, Vitest + fastify.inject() (never supertest or real server in tests).
+    Structure: src/app.ts builds the Fastify instance (no listen()), src/server.ts calls listen() only, plugins in src/plugins/ wrapped with fp(), routes in src/routes/ as encapsulated plugins, schemas in src/schemas/, db in src/db/.
+    Key rules: TypeBox schema on every route covering body/params/querystring/response, preHandler:[fastify.authenticate] on protected routes, never business logic in handlers, @fastify/env + TypeBox for config with hard-fail on missing vars, Pino logger with redact paths and correlation ID child logger, SIGTERM/SIGINT drain with DRAIN_TIMEOUT_MS, @fastify/otel before routes, 100% coverage thresholds.
+
+dependencies:
+  - ref: "pedro-delgallego/api-rest-design:^0.0.2"
+  - ref: "pedro-delgallego/api-rest-resilience:^0.0.2"
+  - ref: "pedro-delgallego/api-security:^0.0.2"
+  - ref: "pedro-delgallego/api-security-headers:^0.0.2"
+  - ref: "pedro-delgallego/api-logging:^0.0.2"
+  - ref: "pedro-delgallego/api-telemetry:^0.0.2"
+  - ref: "pedro-delgallego/api-testing:^0.0.2"
+  - ref: "pedro-delgallego/api-versioning:^0.0.2"
+
+targets:
+  - AGENTS.md
+  - specforge
