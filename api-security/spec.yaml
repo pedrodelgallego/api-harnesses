@@ -1,0 +1,18 @@
+apiVersion: spechub.io/v2
+kind: Spec
+metadata:
+  name: api-security
+  org: pedro-delgallego
+  version: 0.0.2
+  description: "Non-negotiable rules for API security: threat modelling, transport, authentication, authorization, JWT, OAuth 2.1, input validation, SSRF, rate limiting, error responses, CI security testing, and secrets management."
+  license: MIT
+  keywords: [security, jwt, oauth2, authentication, authorization, input-validation, ssrf, rate-limiting, owasp, secrets]
+  authors:
+    - Pedro Delgallego
+  context: |
+    Use this spec as a constraint set when implementing or reviewing API security. Language and framework agnostic — compose with a language-specific blueprint spec.
+    Key rules: IDaaS provider for identity (never roll custom crypto), access_token not id_token for API authorization, per-resource authorization (role membership alone is insufficient — BOLA must be checked), hardcoded alg in JWT validation (never read from token header — prevents alg:none attacks), no PII in JWT payload, short access token expiry, UUIDs not sequential integer IDs (prevents enumeration), additionalProperties:false on every request schema, explicit bodyLimit on every endpoint (default 1MB), parameterized queries or ORM (never concatenate user input), SSRF protection via server-side URL allowlist blocking localhost and internal ranges, rate limiting per-operation and per-user/IP, required secrets validated at startup with hard failure (unsafe fallbacks like secret||"dev-value" are ERROR), never expose stack traces, DB names, table names, or user existence in error responses.
+    Violations table: 22 ERROR.
+targets:
+  - AGENTS.md
+  - specforge
