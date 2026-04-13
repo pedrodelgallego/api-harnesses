@@ -1,0 +1,18 @@
+apiVersion: spechub.io/v2
+kind: Spec
+metadata:
+  name: api-rest-design
+  org: pedro-delgallego
+  version: 0.0.2
+  description: "Non-negotiable rules for REST API design: URL structure, HTTP method semantics, status codes, request/response format, RFC 7807 error format, pagination, filtering, partial updates, and idempotency."
+  license: MIT
+  keywords: [rest, api-design, http, status-codes, pagination, idempotency, rfc7807, problem-details]
+  authors:
+    - Pedro Delgallego
+  context: |
+    Use this spec as a constraint set when designing or reviewing REST APIs. Language and framework agnostic — compose with a language-specific blueprint spec.
+    Key rules: nouns-only URL paths (plural, kebab-case, max two nesting levels), correct HTTP method per operation, comprehensive status code mapping (201+Location on creation, 204 on empty body, 400 for validation, 503+Retry-After for downstream unavailability), RFC 7807 Problem Details error format with machine-readable code field and errors[] array on 400, response envelope wrapping all payloads ({ "data": ... } for single resources, { "data": [...], "meta": {...} } for collections), cursor-first pagination with server-side limit cap returning 200+empty array on empty pages, Idempotency-Key on POST endpoints that trigger side effects with replay contract.
+    Violations table: 17 ERROR + 2 SHOULD NOT.
+targets:
+  - AGENTS.md
+  - specforge
