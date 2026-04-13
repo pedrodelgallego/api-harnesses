@@ -1,0 +1,18 @@
+apiVersion: spechub.io/v2
+kind: Spec
+metadata:
+  name: api-logging
+  org: pedro-delgallego
+  version: 0.0.2
+  description: "Non-negotiable rules for structured application logging: JSON format, required fields, correlation IDs, log levels, sensitive data masking, error entries, stdout-only output, and security event logging."
+  license: MIT
+  keywords: [logging, structured-logging, observability, correlation-id, pii-redaction, json-logging, pino, slog]
+  authors:
+    - Pedro Delgallego
+  context: |
+    Use this spec as a constraint set when implementing or reviewing structured logging. Language and framework agnostic — compose with a language-specific blueprint spec.
+    Key rules: structured logging library only (no console.log/print/println in production), JSON in production with five required fields on every entry (timestamp ISO-8601 UTC, level string not number, msg, service, correlationId), generate correlation ID at request edge and propagate via X-Correlation-ID header, echo X-Correlation-ID on every response, bind correlationId and service to a child/scoped logger so all entries carry them automatically, mask sensitive data at serializer level (full redact for passwords/tokens/secrets, partial for cards/SSNs/phones, presence-flag for auth headers), pass full error object not .message string, emit structured stack trace array on error-level entries, stdout only (log shippers handle routing), disable all logging in tests.
+    Violations table: 8 ERROR + 2 SHOULD NOT.
+targets:
+  - AGENTS.md
+  - specforge
