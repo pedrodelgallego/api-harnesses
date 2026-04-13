@@ -1,0 +1,18 @@
+apiVersion: spechub.io/v2
+kind: Spec
+metadata:
+  name: api-security-headers
+  org: pedro-delgallego
+  version: 0.0.2
+  description: "Non-negotiable rules for HTTP security headers: HSTS, X-Content-Type-Options, X-Frame-Options, CSP, Referrer-Policy, CORS allowlist enforcement, cache control for sensitive responses, and server fingerprint removal."
+  license: MIT
+  keywords: [security-headers, cors, hsts, csp, http-headers, referrer-policy, x-frame-options]
+  authors:
+    - Pedro Delgallego
+  context: |
+    Use this spec as a constraint set when configuring HTTP security headers and CORS. Language and framework agnostic — compose with a language-specific blueprint spec.
+    Key rules: HSTS with max-age=31536000;includeSubDomains on every response, X-Content-Type-Options:nosniff, X-Frame-Options:DENY or CSP frame-ancestors 'none', CSP present without unsafe-inline/unsafe-eval unless nonce or hash is used, Referrer-Policy, strip Server and X-Powered-By headers explicitly (never rely on framework omitting them), Cache-Control:no-store on any response containing tokens/credentials/PII, CORS via explicit allowlist (never wildcard on authenticated endpoints, never reflect Origin unconditionally), expose X-Correlation-ID/Location/Retry-After in CORS exposedHeaders so browsers can read them cross-origin, include Idempotency-Key in allowedHeaders when the API accepts it.
+    Violations table: 9 ERROR.
+targets:
+  - AGENTS.md
+  - specforge
